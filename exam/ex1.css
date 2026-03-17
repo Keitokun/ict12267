@@ -1,0 +1,214 @@
+/* นำเข้าฟอนต์ Kanit จาก Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap');
+
+:root {
+    --primary-color: #e50914;    /* สีแดงหลัก */
+    --dark-bg: #141414;         /* สีพื้นหลังเข้ม */
+    --navbar-bg: #000000;       /* สี Navbar */
+    --text-white: #ffffff;
+    --text-gray: #b3b3b3;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    background-color: #f8f9fa; /* สีพื้นหลังส่วนเนื้อหา */
+    color: #333;
+    line-height: 1.6;
+}
+
+/* --- Navbar (Customizing Bootstrap) --- */
+.navbar {
+    padding: 15px 0;
+    transition: var(--transition);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.navbar-brand img {
+    height: 50px;
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.2));
+}
+
+.nav-link {
+    font-weight: 400;
+    margin: 0 10px;
+    color: var(--text-white) !important;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color) !important;
+    transform: translateY(-2px);
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+.dropdown-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* --- Banner --- */
+.banner-hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)), 
+                url('https://images.unsplash.com/photo-1536440136628-849c177e76a1?q=80&w=1920');
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-hero h1 {
+    font-size: 4rem;
+    text-shadow: 2px 4px 10px rgba(0,0,0,0.5);
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .banner-hero h1 { font-size: 2.5rem; }
+}
+
+/* --- Movie Cards --- */
+.section-title {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+.movie-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: var(--transition);
+    background: #fff;
+}
+
+.movie-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+}
+
+.card-img-top {
+    height: 420px;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.movie-card:hover .card-img-top {
+    scale: 1.05;
+}
+
+.card-body h5 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+/* --- Contact & About --- */
+#about {
+    border-top: 1px solid #eee;
+}
+
+#contact .card {
+    border-radius: 20px;
+    background: #ffffff;
+}
+
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.1);
+}
+
+.btn-danger {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-danger:hover {
+    background-color: #b20710;
+    transform: scale(1.02);
+}
+
+/* --- Modal Styling --- */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    overflow: hidden;
+}
+
+.modal-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #eee;
+}
+
+#modalTitle {
+    color: var(--primary-color);
+}
+
+#modalImg {
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--navbar-bg);
+    padding: 60px 0 30px;
+}
+
+.social-icons a {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #222;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: var(--transition);
+}
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+    color: #fff !important;
+    transform: rotate(360deg);
+}
+
+.footer-copyright {
+    border-top: 1px solid #333;
+    padding-top: 25px;
+    margin-top: 25px;
+    color: var(--text-gray);
+}

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Website - SPU SIT</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="ex1.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #332222;">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/New_logo_spu_%28Converted%29.png" alt="SPU Logo" height="50">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">ภาพยนตร์</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">ล้วงลับเวทีลวง</a></li>
+                            <li><a class="dropdown-item" href="#">เซลล์ขยันพันธุ์เดือด</a></li>
+                            <li><a class="dropdown-item" href="#">Gundam Seed Freedom Special Edition</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#about">เกี่ยวกับเรา</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">ติดต่อเรา</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="banner-hero d-flex align-items-center justify-content-center text-center text-white">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-3">สัมผัสโลกของภาพยนตร์สุดมันส์</h1>
+        </div>
+    </section>
+
+    <main class="container py-5">
+        <h2 class="text-center fw-bold mb-5">ภาพยนตร์แนะนำ</h2>
+        <div class="row g-4">
+            
+            <div class="col-md-4">
+                <div class="card movie-card h-100 shadow border-0">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSatNA0E_YKQzqk1gccbRQPrg6fbXnS9NDauJFt4jlbBNH-yfAs" class="card-img-top" alt="Project Hail Mary">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Project Hail Mary</h5>
+                        <button class="btn btn-danger rounded-pill px-4" 
+                            onclick="updateAndShow(
+                                'Project Hail Mary', 
+                                'Phil Lord, Christopher Miller', 
+                                'Ryan Gosling, Sandra Hüller', 
+                                'เรื่องราวของนักวิทยาศาสตร์ที่ตื่นขึ้นมาบนยานอวกาศเพียงลำพังและจำอะไรไม่ได้เลย เขาต้องใช้ความรู้ทางวิทยาศาสตร์เพื่อกอบกู้โลกจากวิกฤตดวงอาทิตย์', 
+                                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSatNA0E_YKQzqk1gccbRQPrg6fbXnS9NDauJFt4jlbBNH-yfAs'
+                            )">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card movie-card h-100 shadow border-0">
+                    <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRRmZawCA6nU54kqX2dugkNQi4A58G-yqWyUu0E3YwbaVp5GgTC" class="card-img-top" alt="Hoppers">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Hoppers</h5>
+                        <button class="btn btn-danger rounded-pill px-4" 
+                            onclick="updateAndShow(
+                                'Hoppers', 
+                                'Daniel Sakheim', 
+                                'Jon Hamm, Bobby Moynihan', 
+                                'เรื่องราวไซไฟสุดล้ำ เมื่อมนุษย์สามารถถ่ายโอนจิตสำนึกไปยังร่างหุ่นยนต์สัตว์เพื่อสำรวจธรรมชาติในมุมมองใหม่ที่ไม่มีใครเคยเห็น', 
+                                'https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRRmZawCA6nU54kqX2dugkNQi4A58G-yqWyUu0E3YwbaVp5GgTC'
+                            )">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card movie-card h-100 shadow border-0">
+                    <img src="https://mpics.mgronline.com/pics/Images/569000002532503.JPEG" class="card-img-top" alt="Ghost Board">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold">Ghost Board</h5>
+                        <button class="btn btn-danger rounded-pill px-4" 
+                            onclick="updateAndShow(
+                                'Ghost Board', 
+                                'นักกำกับสยองขวัญดาวรุ่ง', 
+                                'นักแสดงวัยรุ่นหน้าใหม่', 
+                                'อาถรรพ์ของกระดานไม้โบราณที่นำพาความสยดสยองมาสู่กลุ่มเพื่อนที่กล้าลองดีกับสิ่งลี้ลับจนเกิดเหตุการณ์ไม่คาดฝัน', 
+                                'https://mpics.mgronline.com/pics/Images/569000002532503.JPEG'
+                            )">ดูรายละเอียด</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <section id="about" class="py-5 bg-light text-center">
+        <div class="container py-4">
+            <h2 class="fw-bold mb-4">เกี่ยวกับเรา</h2>
+            <p class="text-muted fs-5 mx-auto" style="max-width: 800px;">
+                ยินดีต้อนรับสู่ SPU SIT Movie แพลตฟอร์มที่รวบรวมเรื่องราวที่น่าสนใจในวงการภาพยนตร์ เรามุ่งมั่นที่จะนำเสนอข้อมูลที่ถูกต้องและน่าตื่นเต้นสำหรับคอหนังทุกคน
+            </p>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 card p-5 shadow-sm border-0 rounded-4">
+                <h2 class="text-center fw-bold mb-4">ติดต่อเรา</h2>
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label class="form-label">ชื่อ-นามสกุล</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="กรอกชื่อ-นามสกุล" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">อีเมล</label>
+                        <input type="email" class="form-control" id="email" placeholder="example@email.com" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label">ข้อความ</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="กรอกข้อความของคุณ" required></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-danger btn-lg">ส่งข้อมูล</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5">
+        <div class="container text-center">
+            <div class="mb-4">
+                <a href="https://www.facebook.com" target="_blank" class="text-white mx-3 fs-3"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank" class="text-white mx-3 fs-3"><i class="fab fa-instagram"></i></a>
+                <a href="https://line.me" target="_blank" class="text-white mx-3 fs-3"><i class="fab fa-line"></i></a>
+            </div>
+            <p class="mb-0 text-secondary">© 2025 Movie By 68081369</p>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="movieModal" tabindex="-1">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-bold" id="modalTitle">ชื่อภาพยนตร์</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img id="modalImg" src="" class="img-fluid rounded-3 shadow-sm mb-3" alt="Movie Image">
+                        </div>
+                        <div class="col-md-7">
+                            <p><strong>ผู้กำกับ:</strong> <span id="modalDirector"></span></p>
+                            <p><strong>นักแสดงนำ:</strong> <span id="modalCast"></span></p>
+                            <hr>
+                            <p class="fw-bold">เนื้อเรื่องย่อ:</p>
+                            <p id="modalDesc" class="text-muted"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // ฟังก์ชันเดียวที่ใช้ดึงข้อมูลจากปุ่มมาแสดงใน HTML Modal
+        function updateAndShow(title, director, cast, desc, img) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalDirector').innerText = director;
+            document.getElementById('modalCast').innerText = cast;
+            document.getElementById('modalDesc').innerText = desc;
+            document.getElementById('modalImg').src = img;
+            
+            // สั่งเปิด Modal
+            var myModal = new bootstrap.Modal(document.getElementById('movieModal'));
+            myModal.show();
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('ส่งข้อมูลเรียบร้อยแล้ว! เราจะติดต่อกลับหาคุณโดยเร็วที่สุด');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
